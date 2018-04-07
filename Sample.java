@@ -55,12 +55,12 @@ class SampleListener extends Listener {
      * input - a hand
      * return - the char it represents
      */
-    public String handToLetter(hand gf)  {
-        FingerList fl = gf.FingerList();
+    public String handToLetter(Hand gf)  {
+        FingerList fl = gf.fingers();
         FingerList ef = fl.extended();
         String stringEF = "";
-        for (i = 0; i < ef.count(); i++) {
-            stringEF = stringEF + " " ef.get(i).type();
+        for (int i = 0; i < ef.count(); i++) {
+            stringEF = stringEF + " " + ef.get(i).type();
         }
         return stringEF;
     }
