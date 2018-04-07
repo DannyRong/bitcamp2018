@@ -85,6 +85,8 @@ class SampleListener extends Listener {
                 // Get the hand's normal vector and direction
                 Vector normal = hand.palmNormal();
                 Vector direction = hand.direction();
+                
+                System.out.println("Extended fingers: " + handToLetter(hand));
     
                 // Calculate the hand's pitch, roll, and yaw angles
                 System.out.println("  pitch: " + Math.toDegrees(direction.pitch()) + " degrees, "
