@@ -31,20 +31,6 @@ class Sample {
         // Remove the sample listener when done
         controller.removeListener(listener);
     }
-    
-    /**
-     * input - a hand
-     * return - the char it represents
-     */
-    public String handToLetter(hand gf)  {
-        FingerList fl = gf.FingerList();
-        FingerList ef = fl.extended();
-        String 
-        
-        
-        return 
-    }
-    
 }
 
 class SampleListener extends Listener {
@@ -68,7 +54,8 @@ class SampleListener extends Listener {
     public void onFrame(Controller controller) {
         // Get the most recent frame and report some basic information
         Frame frame = controller.frame();
-        if(frame.id() % 60 == 0) {
+       
+	        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
             System.out.println("Frame id: " + frame.id()
                              + ", timestamp: " + frame.timestamp()
                              + ", hands: " + frame.hands().count()
@@ -77,37 +64,37 @@ class SampleListener extends Listener {
             //Get hands
             for(Hand hand : frame.hands()) {
                 String handType = hand.isLeft() ? "Left hand" : "Right hand";
-                System.out.println("  " + handType + ", id: " + hand.id()
-                                 + ", palm position: " + hand.palmPosition());
+                System.out.println("  " + handType + ", \tid: " + hand.id()
+                                 + ", \tpalm position: " + hand.palmPosition());
     
                 // Get the hand's normal vector and direction
                 Vector normal = hand.palmNormal();
                 Vector direction = hand.direction();
-    /**
+    
                 // Calculate the hand's pitch, roll, and yaw angles
                 System.out.println("  pitch: " + Math.toDegrees(direction.pitch()) + " degrees, "
-                                 + "roll: " + Math.toDegrees(normal.roll()) + " degrees, "
-                                 + "yaw: " + Math.toDegrees(direction.yaw()) + " degrees");
-    */
+                                 + "\troll: " + Math.toDegrees(normal.roll()) + " degrees, "
+                                 + "\tyaw: " + Math.toDegrees(direction.yaw()) + " degrees");
+    
                 // Get arm bone
                 Arm arm = hand.arm();
                 System.out.println("  Arm direction: " + arm.direction()
-                                 + ", wrist position: " + arm.wristPosition()
-                                 + ", elbow position: " + arm.elbowPosition());
+                                 + ", \twrist position: " + arm.wristPosition()
+                                 + ", \telbow position: " + arm.elbowPosition());
     
                 // Get fingers
                 for (Finger finger : hand.fingers()) {
                     System.out.println("    " + finger.type() + ", id: " + finger.id()
-                                     + ", length: " + finger.length()
-                                     + "mm, width: " + finger.width() + "mm");
+                                     + ", \tlength: " + finger.length()
+                                     + "mm, \twidth: " + finger.width() + "mm" + ", \ttoString output: " + finger.toString());
     
                     //Get Bones
                     for(Bone.Type boneType : Bone.Type.values()) {
                         Bone bone = finger.bone(boneType);
                         System.out.println("      " + bone.type()
-                                         + " bone, start: " + bone.prevJoint()
-                                         + ", end: " + bone.nextJoint()
-                                         + ", direction: " + bone.direction());
+                                         + "\t bone, start: " + bone.prevJoint()
+                                         + "  \t, end: " + bone.nextJoint()
+                                         + "  \t, direction: " + bone.direction());
                     }
                 }
             }
@@ -115,7 +102,6 @@ class SampleListener extends Listener {
             if (!frame.hands().isEmpty()) {
                 System.out.println();
             }
-        }
     }
 }
 
