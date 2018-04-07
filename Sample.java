@@ -64,6 +64,76 @@ class SampleListener extends Listener {
         }
         return stringEF;
     }
+
+    public boolean containsFinger(FingerList list, Finger.Type type)
+    {
+        int count = list.count();
+        for(int i=0; i < count; i++)
+        {
+            if(list.get(i).type() == type)
+                return true;
+        }
+        return false;
+    }
+
+    public String determineNumber(Hand gf) {
+        FingerList  extended = gf.fingers().extended();
+        String      toReturn = "NO NUMBER DETECTED";
+
+        int count = extended.count();
+        switch(count)
+        {
+            case 1:  //one finger extended; can only be 1, so check
+                if(extended.get(0).type() == Finger.Type.TYPE_INDEX)
+                    toReturn = "ONE";
+                break;
+            case 5:  //all five extended; ez pz it's 5
+                toReturn = "FIVE";
+                break;
+            case 2:  //two extended; can only be 2 so confirm
+                Finger.Type firstType = extended.get(0).type();
+                Finger.Type secType = extended.get(1).type();
+                if((firstType == Finger.Type.TYPE_INDEX || firstType == Finger.Type.TYPE_MIDDLE) &&
+                    (secType == Finger.Type.TYPE_INDEX || secType == Finger.Type.TYPE_MIDDLE))
+                    toReturn = "TWO";
+                break;
+            case 4:  // 4 fingers extendd can only be 4; check if thumb is there
+                if(!containsFinger(extended, Finger.Type.TYPE_THUMB))
+                    toReturn = "FOUR";
+                else
+                    toReturn = "NO NUMBER DETECTED";
+                break;
+            case 3:  //three fingers extended is tricky; 
+
+                //if thumb isn't in it; either 6, 7, 8, or 9
+                if(!containsFinger(extended, Finger.Type.TYPE_THUMB))
+                {
+                    if(!containsFinger(extended, Finger.Type.TYPE_PINKY))
+                        toReturn = "SIX";
+                    else if(!containsFinger(extended, Finger.Type.TYPE_RING))
+                        toReturn = "SEVEN";
+                    else if(!containsFinger(extended, Finger.Type.TYPE_MIDDLE))
+                        toReturn = "EIGHT";
+                    else if(!containsFinger(extended, Finger.Type.TYPE_INDEX))
+                        toReturn = "NINE";
+                }
+                else
+                {
+                    //test if it's three
+                    if(!containsFinger(extended, Finger.Type.TYPE_RING) &&
+                       !containsFinger(extended, Finger.Type.TYPE_PINKY))
+                        toReturn = "THREE";
+                    else
+                        toReturn = "NO NUMBER DETECTED";
+                }
+            
+                break;
+            default:
+                toReturn = "NO NUMBER DETECTED";
+        }
+        return toReturn;
+
+    }
     
 
     public void onFrame(Controller controller) {
@@ -87,6 +157,7 @@ class SampleListener extends Listener {
                 Vector direction = hand.direction();
                 
                 System.out.println("Extended fingers: " + handToLetter(hand));
+                System.out.println("NUMBER detected: " + determineNumber(hand));
     
                 // Calculate the hand's pitch, roll, and yaw angles
                 System.out.println("  pitch: " + Math.toDegrees(direction.pitch()) + " degrees, "
