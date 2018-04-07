@@ -32,19 +32,6 @@ class Sample {
         controller.removeListener(listener);
     }
     
-    /**
-     * input - a hand
-     * return - the char it represents
-     */
-    public String handToLetter(hand gf)  {
-        FingerList fl = gf.FingerList();
-        FingerList ef = fl.extended();
-        String 
-        
-        
-        return 
-    }
-    
 }
 
 class SampleListener extends Listener {
@@ -64,6 +51,21 @@ class SampleListener extends Listener {
     public void onExit(Controller controller) {
         System.out.println("Exited");
     }
+
+    /**
+     * input - a hand
+     * return - the char it represents
+     */
+    public String handToLetter(hand gf)  {
+        FingerList fl = gf.FingerList();
+        FingerList ef = fl.extended();
+        String stringEF = "";
+        for (i = 0; i < ef.count(); i++) {
+            stringEF = stringEF + " " ef.get(i).type();
+        }
+        return stringEF;
+    }
+    
 
     public void onFrame(Controller controller) {
         // Get the most recent frame and report some basic information
