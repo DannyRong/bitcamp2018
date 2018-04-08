@@ -86,21 +86,21 @@ class SampleListener extends Listener {
         {
             case 1:  //one finger extended; can only be 1, so check
                 if(extended.get(0).type() == Finger.Type.TYPE_INDEX)
-                    toReturn = "ONE";
+                    toReturn = drawOne();
                 break;
             case 5:  //all five extended; ez pz it's 5
-                toReturn = "FIVE";
+                toReturn = drawFive();
                 break;
             case 2:  //two extended; can only be 2 so confirm
                 Finger.Type firstType = extended.get(0).type();
                 Finger.Type secType = extended.get(1).type();
                 if((firstType == Finger.Type.TYPE_INDEX || firstType == Finger.Type.TYPE_MIDDLE) &&
                     (secType == Finger.Type.TYPE_INDEX || secType == Finger.Type.TYPE_MIDDLE))
-                    toReturn = "TWO";
+                    toReturn = drawTwo();
                 break;
             case 4:  // 4 fingers extendd can only be 4; check if thumb is there
                 if(!containsFinger(extended, Finger.Type.TYPE_THUMB))
-                    toReturn = "FOUR";
+                    toReturn = drawFour();
                 else
                     toReturn = "NO NUMBER DETECTED";
                 break;
@@ -110,20 +110,20 @@ class SampleListener extends Listener {
                 if(!containsFinger(extended, Finger.Type.TYPE_THUMB))
                 {
                     if(!containsFinger(extended, Finger.Type.TYPE_PINKY))
-                        toReturn = "SIX";
+                        toReturn = drawSix();
                     else if(!containsFinger(extended, Finger.Type.TYPE_RING))
-                        toReturn = "SEVEN";
+                        toReturn = drawSeven();
                     else if(!containsFinger(extended, Finger.Type.TYPE_MIDDLE))
-                        toReturn = "EIGHT";
+                        toReturn = drawEight();
                     else if(!containsFinger(extended, Finger.Type.TYPE_INDEX))
-                        toReturn = "NINE";
+                        toReturn = drawNine();
                 }
                 else
                 {
                     //test if it's three
                     if(!containsFinger(extended, Finger.Type.TYPE_RING) &&
                        !containsFinger(extended, Finger.Type.TYPE_PINKY))
-                        toReturn = "THREE";
+                        toReturn = drawNine();
                     else
                         toReturn = "NO NUMBER DETECTED";
                 }
@@ -167,7 +167,7 @@ class SampleListener extends Listener {
     }
     
     public String drawSeven() {
-        String seven = "";
+        String seven = "   SSSSSSSSSSSSSSS      EEEEEEEEEEEEEEEEEEEEEE     VVVVVVVV           VVVVVVVV     EEEEEEEEEEEEEEEEEEEEEE     NNNNNNNN        NNNNNNNN\n SS:::::::::::::::S     E::::::::::::::::::::E     V::::::V           V::::::V     E::::::::::::::::::::E     N:::::::N       N::::::N\nS:::::SSSSSS::::::S     E::::::::::::::::::::E     V::::::V           V::::::V     E::::::::::::::::::::E     N::::::::N      N::::::N\nS:::::S     SSSSSSS     EE::::::EEEEEEEEE::::E     V::::::V           V::::::V     EE::::::EEEEEEEEE::::E     N:::::::::N     N::::::N\nS:::::S                   E:::::E       EEEEEE      V:::::V           V:::::V        E:::::E       EEEEEE     N::::::::::N    N::::::N\nS:::::S                   E:::::E                    V:::::V         V:::::V         E:::::E                  N:::::::::::N   N::::::N\n S::::SSSS                E::::::EEEEEEEEEE           V:::::V       V:::::V          E::::::EEEEEEEEEE        N:::::::N::::N  N::::::N\n  SS::::::SSSSS           E:::::::::::::::E            V:::::V     V:::::V           E:::::::::::::::E        N::::::N N::::N N::::::N\n    SSS::::::::SS         E:::::::::::::::E             V:::::V   V:::::V            E:::::::::::::::E        N::::::N  N::::N:::::::N\n       SSSSSS::::S        E::::::EEEEEEEEEE              V:::::V V:::::V             E::::::EEEEEEEEEE        N::::::N   N:::::::::::N\n            S:::::S       E:::::E                         V:::::V:::::V              E:::::E                  N::::::N    N::::::::::N\n            S:::::S       E:::::E       EEEEEE             V:::::::::V               E:::::E       EEEEEE     N::::::N     N:::::::::N\nSSSSSSS     S:::::S     EE::::::EEEEEEEE:::::E              V:::::::V              EE::::::EEEEEEEE:::::E     N::::::N      N::::::::N\nS::::::SSSSSS:::::S     E::::::::::::::::::::E               V:::::V               E::::::::::::::::::::E     N::::::N       N:::::::N\nS:::::::::::::::SS      E::::::::::::::::::::E                V:::V                E::::::::::::::::::::E     N::::::N        N::::::N\n SSSSSSSSSSSSSSS        EEEEEEEEEEEEEEEEEEEEEE                 VVV                 EEEEEEEEEEEEEEEEEEEEEE     NNNNNNNN         NNNNNNN\n";
         return seven;
     }
     
@@ -177,7 +177,7 @@ class SampleListener extends Listener {
     }    
 
     public String drawNine() {
-        String nine = "";
+        String nine = "NNNNNNNN        NNNNNNNN     IIIIIIIIII     NNNNNNNN        NNNNNNNN     EEEEEEEEEEEEEEEEEEEEEE\nN:::::::N       N::::::N     I::::::::I     N:::::::N       N::::::N     E::::::::::::::::::::E\nN::::::::N      N::::::N     I::::::::I     N::::::::N      N::::::N     E::::::::::::::::::::E\nN:::::::::N     N::::::N     II::::::II     N:::::::::N     N::::::N     EE::::::EEEEEEEEE::::E\nN::::::::::N    N::::::N       I::::I       N::::::::::N    N::::::N       E:::::E       EEEEEE\nN:::::::::::N   N::::::N       I::::I       N:::::::::::N   N::::::N       E:::::E             \nN:::::::N::::N  N::::::N       I::::I       N:::::::N::::N  N::::::N       E::::::EEEEEEEEEE   \nN::::::N N::::N N::::::N       I::::I       N::::::N N::::N N::::::N       E:::::::::::::::E   \nN::::::N  N::::N:::::::N       I::::I       N::::::N  N::::N:::::::N       E:::::::::::::::E   \nN::::::N   N:::::::::::N       I::::I       N::::::N   N:::::::::::N       E::::::EEEEEEEEEE   \nN::::::N    N::::::::::N       I::::I       N::::::N    N::::::::::N       E:::::E             \nN::::::N     N:::::::::N       I::::I       N::::::N     N:::::::::N       E:::::E       EEEEEE\nN::::::N      N::::::::N     II::::::II     N::::::N      N::::::::N     EE::::::EEEEEEEE:::::E\nN::::::N       N:::::::N     I::::::::I     N::::::N       N:::::::N     E::::::::::::::::::::E\nN::::::N        N::::::N     I::::::::I     N::::::N        N::::::N     E::::::::::::::::::::E\nNNNNNNNN         NNNNNNN     IIIIIIIIII     NNNNNNNN         NNNNNNN     EEEEEEEEEEEEEEEEEEEEEE\n";
         return nine;
     }
     
@@ -205,7 +205,7 @@ class SampleListener extends Listener {
                 Vector direction = hand.direction();
                 
                 //System.out.println("Extended fingers: " + handToLetter(hand));
-                System.out.println("NUMBER detected: " + determineNumber(hand));
+                System.out.println(determineNumber(hand));
 /**    
                 // Calculate the hand's pitch, roll, and yaw angles
                 System.out.println("  pitch: " + Math.toDegrees(direction.pitch()) + " degrees, "
