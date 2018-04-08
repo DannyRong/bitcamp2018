@@ -30,6 +30,7 @@ class Sample {
 
         // Remove the sample listener when done
         controller.removeListener(listener);
+        
     }
 }
 
@@ -135,30 +136,77 @@ class SampleListener extends Listener {
 
     }
     
+    public String drawOne() {
+        String one = "     OOOOOOOOO          NNNNNNNN        NNNNNNNN     EEEEEEEEEEEEEEEEEEEEEE\n   OO:::::::::OO        N:::::::N       N::::::N     E::::::::::::::::::::E\n OO:::::::::::::OO      N::::::::N      N::::::N     E::::::::::::::::::::E\nO:::::::OOO:::::::O     N:::::::::N     N::::::N     EE::::::EEEEEEEEE::::E\nO::::::O   O::::::O     N::::::::::N    N::::::N       E:::::E       EEEEEE\nO:::::O     O:::::O     N:::::::::::N   N::::::N       E:::::E             \nO:::::O     O:::::O     N:::::::N::::N  N::::::N       E::::::EEEEEEEEEE   \nO:::::O     O:::::O     N::::::N N::::N N::::::N       E:::::::::::::::E   \nO:::::O     O:::::O     N::::::N  N::::N:::::::N       E:::::::::::::::E   \nO:::::O     O:::::O     N::::::N   N:::::::::::N       E::::::EEEEEEEEEE   \nO:::::O     O:::::O     N::::::N    N::::::::::N       E:::::E             \nO::::::O   O::::::O     N::::::N     N:::::::::N       E:::::E       EEEEEE\nO:::::::OOO:::::::O     N::::::N      N::::::::N     EE::::::EEEEEEEE:::::E\n OO:::::::::::::OO      N::::::N       N:::::::N     E::::::::::::::::::::E\n   OO:::::::::OO        N::::::N        N::::::N     E::::::::::::::::::::E\n     OOOOOOOOO          NNNNNNNN         NNNNNNN     EEEEEEEEEEEEEEEEEEEEEE\n";
+        return one;
+    }
+    
+    public String drawTwo() {
+        String two = "TTTTTTTTTTTTTTTTTTTTTTT     WWWWWWWW                           WWWWWWWW          OOOOOOOOO     \nT:::::::::::::::::::::T     W::::::W                           W::::::W        OO:::::::::OO   \nT:::::::::::::::::::::T     W::::::W                           W::::::W      OO:::::::::::::OO \nT:::::TT:::::::TT:::::T     W::::::W                           W::::::W     O:::::::OOO:::::::O\nTTTTTT  T:::::T  TTTTTT      W:::::W           WWWWW           W:::::W      O::::::O   O::::::O\n        T:::::T               W:::::W         W:::::W         W:::::W       O:::::O     O:::::O\n        T:::::T                W:::::W       W:::::::W       W:::::W        O:::::O     O:::::O\n        T:::::T                 W:::::W     W:::::::::W     W:::::W         O:::::O     O:::::O\n        T:::::T                  W:::::W   W:::::W:::::W   W:::::W          O:::::O     O:::::O\n        T:::::T                   W:::::W W:::::W W:::::W W:::::W           O:::::O     O:::::O\n        T:::::T                    W:::::W:::::W   W:::::W:::::W            O:::::O     O:::::O\n        T:::::T                     W:::::::::W     W:::::::::W             O::::::O   O::::::O\n      TT:::::::TT                    W:::::::W       W:::::::W              O:::::::OOO:::::::O\n      T:::::::::T                     W:::::W         W:::::W                OO:::::::::::::OO \n      T:::::::::T                      W:::W           W:::W                   OO:::::::::OO   \n      TTTTTTTTTTT                       WWW             WWW                      OOOOOOOOO     ";
+        return two;
+    }
+    
+    public String drawThree() {
+        String three = "TTTTTTTTTTTTTTTTTTTTTTT     HHHHHHHHH     HHHHHHHHH     RRRRRRRRRRRRRRRRR        EEEEEEEEEEEEEEEEEEEEEE     EEEEEEEEEEEEEEEEEEEEEE     \nT:::::::::::::::::::::T     H:::::::H     H:::::::H     R::::::::::::::::R       E::::::::::::::::::::E     E::::::::::::::::::::E     \nT:::::::::::::::::::::T     H:::::::H     H:::::::H     R::::::RRRRRR:::::R      E::::::::::::::::::::E     E::::::::::::::::::::E     \nT:::::TT:::::::TT:::::T     HH::::::H     H::::::HH     RR:::::R     R:::::R     EE::::::EEEEEEEEE::::E     EE::::::EEEEEEEEE::::E     \nTTTTTT  T:::::T  TTTTTT       H:::::H     H:::::H         R::::R     R:::::R       E:::::E       EEEEEE       E:::::E       EEEEEE     \n        T:::::T               H:::::H     H:::::H         R::::R     R:::::R       E:::::E                    E:::::E                  \n        T:::::T               H::::::HHHHH::::::H         R::::RRRRRR:::::R        E::::::EEEEEEEEEE          E::::::EEEEEEEEEE        \n        T:::::T               H:::::::::::::::::H         R:::::::::::::RR         E:::::::::::::::E          E:::::::::::::::E        \n        T:::::T               H:::::::::::::::::H         R::::RRRRRR:::::R        E:::::::::::::::E          E:::::::::::::::E        \n        T:::::T               H::::::HHHHH::::::H         R::::R     R:::::R       E::::::EEEEEEEEEE          E::::::EEEEEEEEEE        \n        T:::::T               H:::::H     H:::::H         R::::R     R:::::R       E:::::E                    E:::::E                  \n        T:::::T               H:::::H     H:::::H         R::::R     R:::::R       E:::::E       EEEEEE       E:::::E       EEEEEE     \n      TT:::::::TT           HH::::::H     H::::::HH     RR:::::R     R:::::R     EE::::::EEEEEEEE:::::E     EE::::::EEEEEEEE:::::E     \n      T:::::::::T           H:::::::H     H:::::::H     R::::::R     R:::::R     E::::::::::::::::::::E     E::::::::::::::::::::E     \n      T:::::::::T           H:::::::H     H:::::::H     R::::::R     R:::::R     E::::::::::::::::::::E     E::::::::::::::::::::E     \n      TTTTTTTTTTT           HHHHHHHHH     HHHHHHHHH     RRRRRRRR     RRRRRRR     EEEEEEEEEEEEEEEEEEEEEE     EEEEEEEEEEEEEEEEEEEEEE     \n";
+        return three;
+    }
 
+    public String drawFour() {
+        String four = "FFFFFFFFFFFFFFFFFFFFFF          OOOOOOOOO          UUUUUUUU     UUUUUUUU     RRRRRRRRRRRRRRRRR        \nF::::::::::::::::::::F        OO:::::::::OO        U::::::U     U::::::U     R::::::::::::::::R       \nF::::::::::::::::::::F      OO:::::::::::::OO      U::::::U     U::::::U     R::::::RRRRRR:::::R      \nFF::::::FFFFFFFFF::::F     O:::::::OOO:::::::O     UU:::::U     U:::::UU     RR:::::R     R:::::R     \n  F:::::F       FFFFFF     O::::::O   O::::::O      U:::::U     U:::::U        R::::R     R:::::R     \n  F:::::F                  O:::::O     O:::::O      U:::::D     D:::::U        R::::R     R:::::R     \n  F::::::FFFFFFFFFF        O:::::O     O:::::O      U:::::D     D:::::U        R::::RRRRRR:::::R      \n  F:::::::::::::::F        O:::::O     O:::::O      U:::::D     D:::::U        R:::::::::::::RR       \n  F:::::::::::::::F        O:::::O     O:::::O      U:::::D     D:::::U        R::::RRRRRR:::::R      \n  F::::::FFFFFFFFFF        O:::::O     O:::::O      U:::::D     D:::::U        R::::R     R:::::R     \n  F:::::F                  O:::::O     O:::::O      U:::::D     D:::::U        R::::R     R:::::R     \n  F:::::F                  O::::::O   O::::::O      U::::::U   U::::::U        R::::R     R:::::R     \nFF:::::::FF                O:::::::OOO:::::::O      U:::::::UUU:::::::U      RR:::::R     R:::::R     \nF::::::::FF                 OO:::::::::::::OO        UU:::::::::::::UU       R::::::R     R:::::R     \nF::::::::FF                   OO:::::::::OO            UU:::::::::UU         R::::::R     R:::::R     \nFFFFFFFFFFF                     OOOOOOOOO                UUUUUUUUU           RRRRRRRR     RRRRRRR     ";
+        return four;
+    }
+
+    public String drawFive() {
+        String five = "FFFFFFFFFFFFFFFFFFFFFF     IIIIIIIIII     VVVVVVVV           VVVVVVVV     EEEEEEEEEEEEEEEEEEEEEE\nF::::::::::::::::::::F     I::::::::I     V::::::V           V::::::V     E::::::::::::::::::::E\nF::::::::::::::::::::F     I::::::::I     V::::::V           V::::::V     E::::::::::::::::::::E\nFF::::::FFFFFFFFF::::F     II::::::II     V::::::V           V::::::V     EE::::::EEEEEEEEE::::E\n  F:::::F       FFFFFF       I::::I        V:::::V           V:::::V        E:::::E       EEEEEE\n  F:::::F                    I::::I         V:::::V         V:::::V         E:::::E             \n  F::::::FFFFFFFFFF          I::::I          V:::::V       V:::::V          E::::::EEEEEEEEEE   \n  F:::::::::::::::F          I::::I           V:::::V     V:::::V           E:::::::::::::::E   \n  F:::::::::::::::F          I::::I            V:::::V   V:::::V            E:::::::::::::::E   \n  F::::::FFFFFFFFFF          I::::I             V:::::V V:::::V             E::::::EEEEEEEEEE   \n  F:::::F                    I::::I              V:::::V:::::V              E:::::E             \n  F:::::F                    I::::I               V:::::::::V               E:::::E       EEEEEE\nFF:::::::FF                II::::::II              V:::::::V              EE::::::EEEEEEEE:::::E\nF::::::::FF                I::::::::I               V:::::V               E::::::::::::::::::::E\nF::::::::FF                I::::::::I                V:::V                E::::::::::::::::::::E\nFFFFFFFFFFF                IIIIIIIIII                 VVV                 EEEEEEEEEEEEEEEEEEEEEE\n";
+        return five;
+    }
+
+    public String drawSix() {
+        String six = "   SSSSSSSSSSSSSSS      IIIIIIIIII     XXXXXXX       XXXXXXX\n SS:::::::::::::::S     I::::::::I     X:::::X       X:::::X\nS:::::SSSSSS::::::S     I::::::::I     X:::::X       X:::::X\nS:::::S     SSSSSSS     II::::::II     X::::::X     X::::::X\nS:::::S                   I::::I       XXX:::::X   X:::::XXX\nS:::::S                   I::::I          X:::::X X:::::X   \n S::::SSSS                I::::I           X:::::X:::::X    \n  SS::::::SSSSS           I::::I            X:::::::::X     \n    SSS::::::::SS         I::::I            X:::::::::X     \n       SSSSSS::::S        I::::I           X:::::X:::::X    \n            S:::::S       I::::I          X:::::X X:::::X   \n            S:::::S       I::::I       XXX:::::X   X:::::XXX\nSSSSSSS     S:::::S     II::::::II     X::::::X     X::::::X\nS::::::SSSSSS:::::S     I::::::::I     X:::::X       X:::::X\nS:::::::::::::::SS      I::::::::I     X:::::X       X:::::X\n SSSSSSSSSSSSSSS        IIIIIIIIII     XXXXXXX       XXXXXXX";
+        return six;
+    }
+    
+    public String drawSeven() {
+        String seven = "";
+        return seven;
+    }
+    
+    public String drawEight() {
+        String eight = "EEEEEEEEEEEEEEEEEEEEEE     IIIIIIIIII             GGGGGGGGGGGGG     HHHHHHHHH     HHHHHHHHH     TTTTTTTTTTTTTTTTTTTTTTT\nE::::::::::::::::::::E     I::::::::I          GGG::::::::::::G     H:::::::H     H:::::::H     T:::::::::::::::::::::T\nE::::::::::::::::::::E     I::::::::I        GG:::::::::::::::G     H:::::::H     H:::::::H     T:::::::::::::::::::::T\nEE::::::EEEEEEEEE::::E     II::::::II       G:::::GGGGGGGG::::G     HH::::::H     H::::::HH     T:::::TT:::::::TT:::::T\n  E:::::E       EEEEEE       I::::I        G:::::G       GGGGGG       H:::::H     H:::::H       TTTTTT  T:::::T  TTTTTT\n  E:::::E                    I::::I       G:::::G                     H:::::H     H:::::H               T:::::T        \n  E::::::EEEEEEEEEE          I::::I       G:::::G                     H::::::HHHHH::::::H               T:::::T        \n  E:::::::::::::::E          I::::I       G:::::G    GGGGGGGGGG       H:::::::::::::::::H               T:::::T        \n  E:::::::::::::::E          I::::I       G:::::G    G::::::::G       H:::::::::::::::::H               T:::::T        \n  E::::::EEEEEEEEEE          I::::I       G:::::G    GGGGG::::G       H::::::HHHHH::::::H               T:::::T        \n  E:::::E                    I::::I       G:::::G        G::::G       H:::::H     H:::::H               T:::::T        \n  E:::::E       EEEEEE       I::::I        G:::::G       G::::G       H:::::H     H:::::H               T:::::T        \nEE::::::EEEEEEEE:::::E     II::::::II       G:::::GGGGGGGG::::G     HH::::::H     H::::::HH           TT:::::::TT      \nE::::::::::::::::::::E     I::::::::I        GG:::::::::::::::G     H:::::::H     H:::::::H           T:::::::::T      \nE::::::::::::::::::::E     I::::::::I          GGG::::::GGG:::G     H:::::::H     H:::::::H           T:::::::::T      \nEEEEEEEEEEEEEEEEEEEEEE     IIIIIIIIII             GGGGGG   GGGG     HHHHHHHHH     HHHHHHHHH           TTTTTTTTTTT      ";
+        return eight;
+    }    
+
+    public String drawNine() {
+        String nine = "";
+        return nine;
+    }
+    
+    
     public void onFrame(Controller controller) {
         // Get the most recent frame and report some basic information
         Frame frame = controller.frame();
        
-	        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+	        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nn\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+/**            
             System.out.println("Frame id: " + frame.id()
                              + ", timestamp: " + frame.timestamp()
                              + ", hands: " + frame.hands().count()
                              + ", fingers: " + frame.fingers().count());
-    
+*/    
             //Get hands
             for(Hand hand : frame.hands()) {
+/**                
                 String handType = hand.isLeft() ? "Left hand" : "Right hand";
                 System.out.println("  " + handType + ", \tid: " + hand.id()
                                  + ", \tpalm position: " + hand.palmPosition());
-    
+*/    
                 // Get the hand's normal vector and direction
                 Vector normal = hand.palmNormal();
                 Vector direction = hand.direction();
                 
-                System.out.println("Extended fingers: " + handToLetter(hand));
+                //System.out.println("Extended fingers: " + handToLetter(hand));
                 System.out.println("NUMBER detected: " + determineNumber(hand));
-    
+/**    
                 // Calculate the hand's pitch, roll, and yaw angles
                 System.out.println("  pitch: " + Math.toDegrees(direction.pitch()) + " degrees, "
                                  + "\troll: " + Math.toDegrees(normal.roll()) + " degrees, "
@@ -185,6 +233,7 @@ class SampleListener extends Listener {
                                          + "  \t, direction: " + bone.direction());
                     }
                 }
+*/            
             }
     
             if (!frame.hands().isEmpty()) {
