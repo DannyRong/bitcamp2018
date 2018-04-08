@@ -11,7 +11,7 @@ import java.lang.Math;
 import com.leapmotion.leap.*;
 
 
-class Sample {
+class Translator {
     public static void main(String[] args) {
         // Create a sample listener and controller
         SampleListener listener = new SampleListener();
@@ -187,53 +187,15 @@ class SampleListener extends Listener {
         Frame frame = controller.frame();
        
 	        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nn\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-/**            
-            System.out.println("Frame id: " + frame.id()
-                             + ", timestamp: " + frame.timestamp()
-                             + ", hands: " + frame.hands().count()
-                             + ", fingers: " + frame.fingers().count());
-*/    
+
             //Get hands
             for(Hand hand : frame.hands()) {
-/**                
-                String handType = hand.isLeft() ? "Left hand" : "Right hand";
-                System.out.println("  " + handType + ", \tid: " + hand.id()
-                                 + ", \tpalm position: " + hand.palmPosition());
-*/    
                 // Get the hand's normal vector and direction
                 Vector normal = hand.palmNormal();
                 Vector direction = hand.direction();
                 
                 //System.out.println("Extended fingers: " + handToLetter(hand));
-                System.out.println(determineNumber(hand));
-/**    
-                // Calculate the hand's pitch, roll, and yaw angles
-                System.out.println("  pitch: " + Math.toDegrees(direction.pitch()) + " degrees, "
-                                 + "\troll: " + Math.toDegrees(normal.roll()) + " degrees, "
-                                 + "\tyaw: " + Math.toDegrees(direction.yaw()) + " degrees");
-    
-                // Get arm bone
-                Arm arm = hand.arm();
-                System.out.println("  Arm direction: " + arm.direction()
-                                 + ", \twrist position: " + arm.wristPosition()
-                                 + ", \telbow position: " + arm.elbowPosition());
-    
-                // Get fingers
-                for (Finger finger : hand.fingers()) {
-                    System.out.println("    " + finger.type() + ", id: " + finger.id()
-                                     + ", \tlength: " + finger.length()
-                                     + "mm, \twidth: " + finger.width() + "mm" + ", \ttoString output: " + finger.toString());
-    
-                    //Get Bones
-                    for(Bone.Type boneType : Bone.Type.values()) {
-                        Bone bone = finger.bone(boneType);
-                        System.out.println("      " + bone.type()
-                                         + "\t bone, start: " + bone.prevJoint()
-                                         + "  \t, end: " + bone.nextJoint()
-                                         + "  \t, direction: " + bone.direction());
-                    }
-                }
-*/            
+                System.out.println(determineNumber(hand));           
             }
     
             if (!frame.hands().isEmpty()) {
