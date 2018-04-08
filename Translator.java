@@ -5,7 +5,7 @@
 * https://developer.leapmotion.com/sdk_agreement, or another agreement         *
 * between Leap Motion and you, your company or other organization.             *
 \******************************************************************************/
-
+// Hand Model : Will An
 import java.io.IOException;
 import java.lang.Math;
 import com.leapmotion.leap.*;
